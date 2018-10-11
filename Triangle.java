@@ -18,24 +18,14 @@ public class Triangle{
     arr[0] = v1;
     arr[1] = v2;
     arr[2] = v3;
-    Point g = new Point(arr[index].getX(),arr[index].getY());
-    return g;
+    return new Point(arr[index]);
   }
   public String toString(){
-    String vertex1 = "A(" + v1.getX() + "," + v1.getY() + ")";
-    String vertex2 = "B(" + v2.getX() + "," + v2.getY() + ")";
-    String vertex3 = "C(" + v3.getX() + "," + v3.getY() + ")";
-    return "Triangle: " + vertex1 + " " + vertex2 + " " + vertex3 + " ";
+    return "Triangle: A" + v1 + " B" + v2 + " C" + v3;
   }
   public void setVertex(int index, Point newP){
-    if (index == 0){
-      v1 = newP;
-    }
-    if (index == 1){
-      v2 = newP;
-    }
-    if (index == 2){
-      v3 = newP;
-    }
+    if (index == 0) v1 = newP;
+    if (index == 1) v2 = newP;
+    if (index == 2) v3 = newP;
   }
 }
