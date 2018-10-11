@@ -14,16 +14,12 @@ public class Point{
   public double getY(){
     return y;
   }
-  public double dist(double x1, double y1, double x2, double y2){
-    double inside;
-    inside = Math.pow((x2-x1),2) + Math.pow((y2-y1),2);
-    return Math.sqrt(inside);
-  }
+
   public double distanceTo(Point p){
-    return dist(this.x, this.y, p.x, p.y);
+    return Math.sqrt(Math.pow((x - p.x), 2) + Math.pow((y - p.y), 2));
   }
-  public double distance(Point ggg, Point hhh){
-    return dist(ggg.x, ggg.y, hhh.x, hhh.y);
+  public static double distance(Point g, Point h){
+    return Math.sqrt(Math.pow((g.x - h.x), 2) +  Math.pow((g.y - h.y),2));
   }
   public String toString(){
     return "(" + x + "," + y + ")";
